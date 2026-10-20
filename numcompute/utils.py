@@ -569,6 +569,7 @@ def one_hot(labels, n_classes: Optional[int] = None) -> np.ndarray:
     k = int(lab.max()) + 1 if n_classes is None and lab.size else (n_classes or 0)
     if lab.size and lab.max() >= k:
         raise ValueError(f"label {int(lab.max())} is out of range for n_classes={k}")
+    lab = lab.astype(np.intp, copy=False)  # empty input arrives as float64
     out = np.zeros((lab.size, k))
     out[np.arange(lab.size), lab] = 1.0
     return out
