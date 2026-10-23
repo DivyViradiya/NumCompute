@@ -352,4 +352,4 @@ In accordance with course academic integrity guidelines, all member contribution
 
 ## 10. License
 
-Developed for educational purposes as part of the University of Adelaide *Programming for AI* curriculum. Released under the MIT License.
+Developed for educational purposes as part of the ADELAIDE UNIVERSITY *Programming for AI* curriculum. Released under the MIT License.
