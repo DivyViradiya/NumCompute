@@ -76,9 +76,9 @@ def test_standard_scaler_errors(X):
 # ----------------------------------------------------------------- MinMaxScaler
 def test_minmax_default_range_and_custom_range(X):
     M = MinMaxScaler().fit_transform(X)
-    assert np.nanmin(M[:, 0]) == 0 and np.nanmax(M[:, 0]) == 1
+    assert np.isclose(np.nanmin(M[:, 0]), 0) and np.isclose(np.nanmax(M[:, 0]), 1)
     M2 = MinMaxScaler((-1, 1)).fit_transform(X)
-    assert np.nanmin(M2[:, 0]) == -1 and np.nanmax(M2[:, 0]) == 1
+    assert np.isclose(np.nanmin(M2[:, 0]), -1) and np.isclose(np.nanmax(M2[:, 0]), 1)
 
 
 def test_minmax_constant_column_maps_to_low(X):

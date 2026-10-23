@@ -5,3 +5,5 @@ __pycache__/
 .pytest_cache/
 build/
 dist/
+notes.md
+.DS_Store
