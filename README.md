@@ -1,7 +1,7 @@
 # NumCompute
 
 > **A modular scientific computing toolkit in Plain Python and NumPy only.**  
-> Built for *Programming for AI (Assignment 2.1)* at the University of Adelaide.
+> Built for *Programming for AI (Assignment 2.1)* at the Adelaide University.
 
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
 [![NumPy](https://img.shields.io/badge/numpy-pure%20numpy-orange.svg)](https://numpy.org/)
@@ -12,7 +12,7 @@
 
 ## 1. Project Overview & Philosophy
 
-**NumCompute** simulates core machine learning library primitives—similar to scikit-learn, scipy.stats, and scipy.optimize—constructed entirely from first principles using **only plain Python and NumPy** (no pandas, scikit-learn, PyTorch, or SciPy).
+**NumCompute** simulates core scientific computing library primitives similar to scikit learn, scipy.stats, and scipy.optimize constructed entirely from first principles using **only plain Python and NumPy** (no pandas, scikit-learn, PyTorch, or SciPy).
 
 ### Core Technical Pillars
 
@@ -337,16 +337,30 @@ The notebook illustrates:
 
 ---
 
-## 9. Team Contributions & Project Roles
+## 9. Team Contributions & Division of Work
 
-In accordance with course academic integrity guidelines, all member contributions are transparently recorded below. Code authoring was performed by Divy Viradiya (with iterative pair-programming assistance from Claude). Teammates managed batch branch integration, cross-platform validation, bug reproduction, review, and documentation deliverables.
+In accordance with course academic integrity guidelines, all member contributions across **code authoring**, **written report**, and **video presentation** deliverables are transparently recorded below.
 
-| Member Name | GitHub / Git Handle | Key Responsibilities & Contributions | Merged Branches / PRs |
+### 9.1 Deliverables & Responsibility Matrix
+
+| Project Deliverable | Primary Contributor(s) | Key Deliverables Produced |
+| :--- | :--- | :--- |
+| **Codebase & Architecture** | **Divy Viradiya** (Lead) | Complete modular architecture, 10 core modules, 281 unit tests, `CONVENTIONS.md`, `demo/quickstart.ipynb`. |
+| **Batch Integration & QA** | **Mihir Patel**, **Hetsi Patel**, **Tanmay Patel** | Branch review, cross-platform validation, bug reporting (`BUGLOG.md`), benchmark verification. |
+| **Written Technical Report** | **Tanmay Patel** & **Hetsi Patel** | Comprehensive assignment report, methodology write-up, experimental analysis, and formatting. |
+| **Video Production & Script**| **Mihir Patel** | Video production planning, script drafting (`VIDEO_SCRIPT.pdf`), slide/screen assets, and final video editing. |
+| **Video Screen Recording** | **Divy Viradiya** | Solo screen capture walkthrough, code & notebook demonstration, and spoken voiceover recording. |
+
+---
+
+### 9.2 Detailed Member Breakdown
+
+| Member Name | GitHub / Git Handle | Role & Deliverable Contributions | Merged Branches / Artifacts |
 | :--- | :--- | :--- | :--- |
-| **Divya Viradiya** | [`@DivyViradiya`](https://github.com/DivyViradiya) | **Lead Architect & Toolkit Author**: Designed full architecture, conventions (`CONVENTIONS.md`), and authored all core modules (`utils`, `io`, `preprocessing`, `sort_search`, `rank`, `stats`, `metrics`, `optim`, `pipeline`, `benchmarking`) and test suites (281 tests). Authored `demo/quickstart.ipynb`, `README.md`, resolved core defects (BUG-01, BUG-03, float tolerances). | `main`, PR #2 (`feat/core-modules`), commit `ebf5a33`, `128ef59` |
-| **Mihir Patel** | [`@mihirpatel2409`](https://github.com/mihirpatel2409) | **Batch 3 Integration & Test Lead**: Integrated, tested, and validated Batch 3 (`sort_search.py`, `rank.py`, and test suites). Verified edge cases for top-$k$, quickselect, and ranking ties. Assisted with `BUGLOG.md` review. | PR #1 (`feat/sort-search-rank`), commit `11da362`, merge `b31cc16` |
-| **Hetsi Patel** | [`@Hetsi1910`](https://github.com/Hetsi1910) | **Batch 4 Integration & Evaluation Lead**: Integrated and verified Batch 4 (`stats.py`, `metrics.py`, and test suites). Diagnosed and reported import dependency ordering issue on `main` (PROC-01 in `BUGLOG.md`). Validated ROC/AUC calculations. | PR #3 (`feat/stats-metrics`), commit `fcbe3ab`, merge `b67f454` |
-| **Tanmay Patel** | [`@Legacy164`](https://github.com/Legacy164) | **Batch 5 Integration & Benchmark Lead**: Integrated Batch 5 (`optim.py`, `benchmarking.py`, final package init, and test suites). Executed complete benchmark suite on Windows hardware, recording `benchmark/results.md`. Validated finite-difference Jacobians. | PR #4 (`feat/optim-benchmark-final`), commit `728a478`, merge `60ae707` |
+| **Divy Viradiya** | [`@DivyViradiya`](https://github.com/DivyViradiya) | **Lead Architect & Video Presenter**: Designed architecture and authored all core modules (`utils`, `io`, `preprocessing`, `sort_search`, `rank`, `stats`, `metrics`, `optim`, `pipeline`, `benchmarking`), test suites (281 tests), `demo/quickstart.ipynb`, `README.md`, resolved core defects (BUG-01, BUG-03). Conducted the **live video screen recording and full spoken voiceover**. | `main`, PR #2 (`feat/core-modules`), commit `ebf5a33`, `128ef59`, `VIDEO_SCRIPT.md` |
+| **Mihir Patel** | [`@mihirpatel2409`](https://github.com/mihirpatel2409) | **Batch 3 Integration & Video Producer**: Integrated Batch 3 (`sort_search.py`, `rank.py`, and test suites). Verified edge cases for top-$k$, quickselect, and ranking ties. Assisted with `BUGLOG.md`. Co-authored the **video script structure and completed final video editing / audio mastering**. | PR #1 (`feat/sort-search-rank`), commit `11da362`, merge `b31cc16`, `VIDEO_SCRIPT.pdf` |
+| **Hetsi Patel** | [`@Hetsi1910`](https://github.com/Hetsi1910) | **Batch 4 Integration & Report Co-Author**: Integrated and verified Batch 4 (`stats.py`, `metrics.py`, and test suites). Diagnosed and documented import dependency ordering issue on `main` (PROC-01 in `BUGLOG.md`). Validated ROC/AUC calculations. Co-authored and formatted the **final written technical assignment report**. | PR #3 (`feat/stats-metrics`), commit `fcbe3ab`, merge `b67f454`, Final Assignment Report |
+| **Tanmay Patel** | [`@Legacy164`](https://github.com/Legacy164) | **Batch 5 Integration & Report Co-Author**: Integrated Batch 5 (`optim.py`, `benchmarking.py`, final package init, and test suites). Executed complete benchmark suite on Windows hardware (`benchmark/results.md`). Validated finite-difference Jacobians. Co-authored the **final written technical assignment report** and performance discussions. | PR #4 (`feat/optim-benchmark-final`), commit `728a478`, merge `60ae707`, Final Assignment Report |
 
 ---
 
